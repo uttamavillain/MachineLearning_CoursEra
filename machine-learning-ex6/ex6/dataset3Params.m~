@@ -35,13 +35,14 @@ for c = C
         answer(i,1) = c;
         answer(i,2) = sigma;
         answer(i,3) = mean(double(pred ~= yval));
-        i = i+1;
     end
 end
 
-[val, I] = min(answer(:,3));
-C = answer(I,1);
-sigma = answer(I,2);
+answer
+
+val[val, I] = min(pred(:,1));
+C = pred(I,1);
+sigma = pred(I,2);
 
 
 
